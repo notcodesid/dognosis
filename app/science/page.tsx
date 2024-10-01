@@ -3,6 +3,57 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { ChevronDown } from 'lucide-react'
+import Image from 'next/image'
+import image1 from "@/assets/disease_detection_table.webp"
+import image2 from "@/assets/covid_detection.webp"
+
+interface NestedToggleProps {
+    title: any;
+    image: any; 
+  }
+
+const NestedToggle = ({ title, image } : NestedToggleProps) => {
+  const [isOpen, setIsOpen] = useState(false)
+
+  return (
+    <div className="mt-4 bg-gray-700 rounded-lg overflow-hidden">
+      <button
+        className="w-full px-4 py-2 flex justify-between items-center text-left text-white hover:bg-gray-600 transition-colors duration-200"
+        onClick={() => setIsOpen(!isOpen)}
+      >
+        <span className="text-lg font-semibold">{title}</span>
+        <motion.div
+          animate={{ rotate: isOpen ? 180 : 0 }}
+          transition={{ duration: 0.3 }}
+        >
+          <ChevronDown className="w-5 h-5" />
+        </motion.div>
+      </button>
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: 'auto', opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.3 }}
+          >
+            <div className="px-4 py-2 text-gray-300">
+              {image && (
+                <Image
+                  src={image}
+                  alt={title}
+                  width={800}
+                  height={400}
+                  className="mt-4 rounded-lg"
+                />
+              )}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
+  )
+}
 
 const ScienceSection = () => {
   const [activeSection, setActiveSection] = useState<string | null>(null)
@@ -23,18 +74,18 @@ const ScienceSection = () => {
           </p>
           <p className="mb-4">
             Recent studies show that scalp EEG can provide meaningful inferences on face processing
-            (<a href="https://www.nature.com/articles/s41598-020-76808-8" target='_blank' className="text-blue-400 hover:text-blue-300">Nature Scientific Reports, 2020</a>),
-            human vs dog vocalizations (<a href="https://royalsocietypublishing.org/doi/10.1098/rsos.211769" target='_blank' className="text-blue-400 hover:text-blue-300">Royal Society, 2022</a>) and known
-            vs unknown words (<a href="https://royalsocietypublishing.org/doi/10.1098/rsos.200851" target='_blank' className="text-blue-400 hover:text-blue-300">Royal Society, 2020</a>). These inferences were possible despite limitations
+            (<a href="https://www.nature.com/articles/s41598-020-76808-8" className="text-blue-400 hover:text-blue-300">Nature Scientific Reports, 2020</a>),
+            human vs dog vocalizations (<a href="https://royalsocietypublishing.org/doi/10.1098/rsos.211769" className="text-blue-400 hover:text-blue-300">Royal Society, 2022</a>) and known
+            vs unknown words (<a href="https://royalsocietypublishing.org/doi/10.1098/rsos.200851" className="text-blue-400 hover:text-blue-300">Royal Society, 2020</a>). These inferences were possible despite limitations
             from using wired human systems and electrodes that are several years behind current state-of-
             the-art as well as relying on sparse data (few dogs and total minutes recorded).
           </p>
           <h4 className="text-lg font-semibold mb-2">Papers</h4>
           <ul className="list-disc list-inside mb-4">
-            <li><a href="https://osf.io/preprints/osf/xngf5" target='_blank'  className="text-blue-400 hover:text-blue-300">Towards A 4E Approach to Canine Olfaction</a></li>
-            <li><a href="https://www.biorxiv.org/content/10.1101/2023.08.14.552730v1.abstract" target='_blank'  className="text-blue-400 hover:text-blue-300">Non-Invasive Canine Electroencephalography (EEG) : A Systematic Review [preprint]</a></li>
-            <li><a href="https://www.tandfonline.com/eprint/EGKI76WENMCT4DVYVIIN/full?target=10.1080/01691864.2024.2369794" target='_blank'  className="text-blue-400 hover:text-blue-300">Towards Canine BCIs [Advanced Robotics, 2024]</a></li>
-            <li><a href="https://www.techrxiv.org/articles/preprint/A_Human-Canine_Interface_From_Sensors_Haptics_and_AI/24082260" target='_blank'  className="text-blue-400 hover:text-blue-300">A Human-Canine Interface from Sensors, Haptics, and AI [preprint]</a></li>
+            <li><a href="#" className="text-blue-400 hover:text-blue-300">Towards A 4E Approach to Canine Olfaction</a></li>
+            <li><a href="#" className="text-blue-400 hover:text-blue-300">Non-Invasive Canine Electroencephalography (EEG) : A Systematic Review [preprint]</a></li>
+            <li><a href="#" className="text-blue-400 hover:text-blue-300">Towards Canine BCIs [Advanced Robotics, 2024]</a></li>
+            <li><a href="#" className="text-blue-400 hover:text-blue-300">A Human-Canine Interface from Sensors, Haptics, and AI [preprint]</a></li>
           </ul>
         </>
       ),
@@ -60,7 +111,7 @@ const ScienceSection = () => {
           <p>
             This is why companies like Rejuvenate Bio (George Church) and research efforts like the NIH-
             funded Dog Aging Project are focusing their longevity efforts on dogs, with Loyal being a
-            pioneer having received <a href="https://loyalfordogs.com/posts/loyal-announces-historic-fda-milestone-for-large-dog-lifespan-extension-drug" target="_blank" className="text-blue-400 hover:text-blue-300">FDA approval</a> for their longevity treatment for large dogs.
+            pioneer having received <a href="https://loyalfordogs.com/posts/loyal-announces-historic-fda-milestone-for-large-dog-lifespan-extension-drug" className="text-blue-400 hover:text-blue-300">FDA approval</a> for their longevity treatment for large dogs.
           </p>
         </>
       ),
@@ -71,23 +122,41 @@ const ScienceSection = () => {
         <>
           <p className="mb-4">
             Detection dogs has been evaluated in detection multiple types of diseases and biological
-            conditions in humans, animals, and even <a href="https://www.pnas.org/doi/abs/10.1073/pnas.1914296117" target="_blank"  className="text-blue-400 hover:text-blue-300">plants</a>. A handy table from a 2021 paper
+            conditions in humans, animals, and even <a href="https://www.pnas.org/doi/abs/10.1073/pnas.1914296117" className="text-blue-400 hover:text-blue-300">plants</a>. A handy table from a 2021 paper
             summarizes twenty papers:
           </p>
-          <p className="mb-4">
-            <a href="https://bmcinfectdis.biomedcentral.com/articles/10.1186/s12879-021-06523-8" target="_blank" className="text-blue-400 hover:text-blue-300">Detection Dogs Table 1 : All diseases (BMC, 2021)</a>
-          </p>
-          <p className="mb-4">
+          <NestedToggle
+  title={
+    <>
+      Detection Dogs Table 1 : All diseases{' '}
+      <a href="https://bmcinfectdis.biomedcentral.com/articles/10.1186/s12879-021-06523-8" className="text-blue-400 hover:text-blue-300" target="_blank" rel="noopener noreferrer">
+        (BMC, 2021)
+      </a>
+    </>
+  }
+  image={image1}
+/>
+<p className="mt-4 mb-4">
             The above table does not include the large number of studies investigating detection dogs for
             Covid19, summarized below in a table from the same paper:
           </p>
-          <p className="mb-4">
-            <a href="https://bmcinfectdis.biomedcentral.com/articles/10.1186/s12879-021-06523-8" target="_blank"  className="text-blue-400 hover:text-blue-300">Detection Dogs Table 2 : Covid (BMC, 2021)</a>
-          </p>
-          <p className="mb-4">
-            For a brief discussion, see the Substack essay <a href="https://runsandtumbles.substack.com/p/canine-medical-intuitives-2023-update" target="_blank"  className="text-blue-400 hover:text-blue-300">Canine Medical Intuitives</a>. One point worth
+        
+
+          <NestedToggle
+             title={
+                <>
+                  Detection Dogs Table 2 : Covid{' '}
+                  <a href="https://bmcinfectdis.biomedcentral.com/articles/10.1186/s12879-021-06523-8" className="text-blue-400 hover:text-blue-300" target="_blank" rel="noopener noreferrer">
+                    (BMC, 2021)
+                  </a>
+                </>
+              }
+            image={image2}
+          />
+          <p className="mt-4 mb-4">
+            For a brief discussion, see the Substack essay <a href="#" className="text-blue-400 hover:text-blue-300">Canine Medical Intuitives</a>. One point worth
             highlighting is that, in one study that explicitly compared the two, detection dogs were more
-            accurate than gold standard PCR for Covid-19 (<a href="https://www.nature.com/articles/s42003-021-02232-9" target="_blank"  className="text-blue-400 hover:text-blue-300">Nature, 2021</a>).
+            accurate than gold standard PCR for Covid-19 (<a href="https://www.nature.com/articles/s42003-021-02232-9" className="text-blue-400 hover:text-blue-300">Nature, 2021</a>).
           </p>
           <p>
             Despite increased interest in devising machine olfaction approaches to disease and other kinds
