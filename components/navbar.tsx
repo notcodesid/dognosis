@@ -5,7 +5,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { Menu, X } from 'lucide-react'
-import logo from "../logo.png"
+import logo from "../assets/logo.png"
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
@@ -19,13 +19,13 @@ export default function Navbar() {
   ]
 
   return (
-    <nav className="bg-gray-800 text-white">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-gray-900 bg-opacity-80 backdrop-filter backdrop-blur-lg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex-shrink-0 flex items-center">
             <Link href="/" className="flex items-center">
               <Image src={logo} alt="Dognosis Logo" width={32} height={32} className="mr-2" />
-              <span className="text-xl font-bold">DOGNOSIS</span>
+              <span className="text-xl font-bold text-white">DOGNOSIS</span>
             </Link>
           </div>
           <div className="hidden md:block">
@@ -60,7 +60,7 @@ export default function Navbar() {
       </div>
 
       <motion.div
-        className={`${isOpen ? 'block' : 'hidden'} md:hidden`}
+        className={`${isOpen ? 'block' : 'hidden'} md:hidden bg-gray-900 bg-opacity-80 backdrop-filter backdrop-blur-lg`}
         initial="closed"
         animate={isOpen ? "open" : "closed"}
         variants={{
