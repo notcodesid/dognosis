@@ -82,10 +82,10 @@ const ScienceSection = () => {
           </p>
           <h4 className="text-lg font-semibold mb-2">Papers</h4>
           <ul className="list-disc list-inside mb-4">
-            <li><a href="#" className="text-blue-400 hover:text-blue-300">Towards A 4E Approach to Canine Olfaction</a></li>
-            <li><a href="#" className="text-blue-400 hover:text-blue-300">Non-Invasive Canine Electroencephalography (EEG) : A Systematic Review [preprint]</a></li>
-            <li><a href="#" className="text-blue-400 hover:text-blue-300">Towards Canine BCIs [Advanced Robotics, 2024]</a></li>
-            <li><a href="#" className="text-blue-400 hover:text-blue-300">A Human-Canine Interface from Sensors, Haptics, and AI [preprint]</a></li>
+            <li><a href="https://osf.io/xngf5" className="text-blue-400 hover:text-blue-300">Towards A 4E Approach to Canine Olfaction</a></li>
+            <li><a href="https://www.biorxiv.org/content/10.1101/2023.08.14.552730v1.abstract" className="text-blue-400 hover:text-blue-300">Non-Invasive Canine Electroencephalography (EEG) : A Systematic Review [preprint]</a></li>
+            <li><a href="https://www.biorxiv.org/content/10.1101/2023.08.14.552730v1.abstract" className="text-blue-400 hover:text-blue-300">Towards Canine BCIs [Advanced Robotics, 2024]</a></li>
+            <li><a href="https://www.techrxiv.org/articles/preprint/A_Human-Canine_Interface_From_Sensors_Haptics_and_AI/24082260" className="text-blue-400 hover:text-blue-300">A Human-Canine Interface from Sensors, Haptics, and AI [preprint]</a></li>
           </ul>
         </>
       ),
@@ -152,7 +152,7 @@ const ScienceSection = () => {
             image={image2}
           />
           <p className="mt-4 mb-4">
-            For a brief discussion, see the Substack essay <a href="#" className="text-blue-400 hover:text-blue-300">Canine Medical Intuitives</a>. One point worth
+            For a brief discussion, see the Substack essay <a href="https://www.nature.com/articles/s42003-021-02232-9" className="text-blue-400 hover:text-blue-300">Canine Medical Intuitives</a>. One point worth
             highlighting is that, in one study that explicitly compared the two, detection dogs were more
             accurate than gold standard PCR for Covid-19 (<a href="https://www.nature.com/articles/s42003-021-02232-9" className="text-blue-400 hover:text-blue-300">Nature, 2021</a>).
           </p>
