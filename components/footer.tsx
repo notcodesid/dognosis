@@ -39,7 +39,12 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-4">Explore More</h3>
             <ul className="space-y-2 text-center">
               <li><a href="/career" className="text-gray-300 hover:text-blue-300 transition-colors duration-300">Career</a></li>
+
               <li><a href="/dognosisnow" className="text-gray-300 hover:text-blue-300 transition-colors duration-300">Dognosis Now</a></li>
+
+              <li><a href="/philosophy" className="text-gray-300 hover:text-blue-300 transition-colors duration-300">Philosophy</a></li>
+
+
             </ul>
           </div>
           <div className="flex flex-col items-center">
