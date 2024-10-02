@@ -12,15 +12,8 @@ const Footer = () => {
     <footer className="bg-gray-700 text-white py-12 border-t border-gray-600">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          <div className="flex items-center">
-            <Image
-              src={logo}
-              alt="Dognosis Logo"
-              width={40}
-              height={40}
-              className="mr-3"
-            />
-            <div>
+          <div className="flex items-center text-center">
+            <div className='text-center'>
               <h3 className="text-lg font-semibold mb-2">Dognosis</h3>
               <p className="text-gray-300">Reimagining the relationship between humans and our best friends</p>
             </div>
