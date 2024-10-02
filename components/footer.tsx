@@ -11,8 +11,8 @@ const Footer = () => {
   return (
     <footer className="bg-gray-700 text-white py-12 border-t border-gray-600">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div>
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div className="flex items-center">
             <Image
               src={logo}
               alt="Dognosis Logo"
@@ -29,10 +29,17 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2 text-center">
               <li><a href="/" className="text-gray-300 hover:text-blue-300 transition-colors duration-300">Home</a></li>
-              <li><a href="/about" className="text-gray-300 hover:text-blue-300  transition-colors duration-300">About</a></li>
-              <li><a href="/science" className="text-gray-300 hover:text-blue-300  transition-colors duration-300">Science</a></li>
-              <li><a href="/team" className="text-gray-300 hover:text-blue-300  transition-colors duration-300">Team</a></li>
-              <li><a href="/contact" className="text-gray-300 hover:text-blue-300  transition-colors duration-300">Contact</a></li>
+              <li><a href="/about" className="text-gray-300 hover:text-blue-300 transition-colors duration-300">About</a></li>
+              <li><a href="/science" className="text-gray-300 hover:text-blue-300 transition-colors duration-300">Science</a></li>
+              <li><a href="/team" className="text-gray-300 hover:text-blue-300 transition-colors duration-300">Team</a></li>
+              <li><a href="/contact" className="text-gray-300 hover:text-blue-300 transition-colors duration-300">Contact</a></li>
+            </ul>
+          </div>
+          <div className="flex flex-col items-center">
+            <h3 className="text-lg font-semibold mb-4">Explore More</h3>
+            <ul className="space-y-2 text-center">
+              <li><a href="/career" className="text-gray-300 hover:text-blue-300 transition-colors duration-300">Career</a></li>
+              <li><a href="/dognosisNow" className="text-gray-300 hover:text-blue-300 transition-colors duration-300">Dognosis Now</a></li>
             </ul>
           </div>
           <div className="flex flex-col items-center">
