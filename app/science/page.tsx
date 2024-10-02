@@ -6,6 +6,7 @@ import { ChevronDown } from 'lucide-react'
 import Image from 'next/image'
 import image1 from "@/assets/disease_detection_table.webp"
 import image2 from "@/assets/covid_detection.webp"
+import TheTechSection from '@/components/tech'
 
 interface NestedToggleProps {
   title: React.ReactNode;
@@ -203,6 +204,8 @@ const ScienceSection = () => {
           ))}
         </div>
       </div>
+
+      <TheTechSection />
     </section>
   )
 }
