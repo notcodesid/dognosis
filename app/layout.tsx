@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     siteName: "Dognosis",
     images: [
       {
-        url: "https://dognosis.vercel.app/mainlogo.png",
+        url: "/mainlogo.png",
         width: 1200,
         height: 630,
       },
