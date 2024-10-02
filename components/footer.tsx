@@ -2,8 +2,6 @@
 
 import { motion } from 'framer-motion'
 import { Twitter, Instagram, Linkedin } from 'lucide-react'
-import logo from "@/assets/logo.png"
-import Image from 'next/image'
 
 const Footer = () => {
   const currentYear = new Date().getFullYear()
