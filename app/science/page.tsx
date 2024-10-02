@@ -8,11 +8,12 @@ import image1 from "@/assets/disease_detection_table.webp"
 import image2 from "@/assets/covid_detection.webp"
 
 interface NestedToggleProps {
-    title: any;
-    image: any; 
-  }
+  title: React.ReactNode;
+  content: React.ReactNode;
+  image: any;
+}
 
-const NestedToggle = ({ title, image } : NestedToggleProps) => {
+const NestedToggle = ({ title, content, image }: NestedToggleProps) => {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
@@ -38,15 +39,14 @@ const NestedToggle = ({ title, image } : NestedToggleProps) => {
             transition={{ duration: 0.3 }}
           >
             <div className="px-4 py-2 text-gray-300">
-              {image && (
-                <Image
-                  src={image}
-                  alt={title}
-                  width={800}
-                  height={400}
-                  className="mt-4 rounded-lg"
-                />
-              )}
+              <Image
+                src={image}
+                alt={typeof title === 'string' ? title : 'Table'}
+                width={800}
+                height={400}
+                className="mt-4 rounded-lg"
+              />
+              <div className="mt-4">{content}</div>
             </div>
           </motion.div>
         )}
@@ -126,31 +126,29 @@ const ScienceSection = () => {
             summarizes twenty papers:
           </p>
           <NestedToggle
-  title={
-    <>
-      Detection Dogs Table 1 : All diseases{' '}
-      <a href="https://bmcinfectdis.biomedcentral.com/articles/10.1186/s12879-021-06523-8" className="text-blue-400 hover:text-blue-300" target="_blank" rel="noopener noreferrer">
-        (BMC, 2021)
-      </a>
-    </>
-  }
-  image={image1}
-/>
-<p className="mt-4 mb-4">
-            The above table does not include the large number of studies investigating detection dogs for
-            Covid19, summarized below in a table from the same paper:
-          </p>
-        
-
+            title={
+              <>
+                Detection Dogs Table 1 : All diseases{' '}
+                <a href="https://bmcinfectdis.biomedcentral.com/articles/10.1186/s12879-021-06523-8" className="text-blue-400 hover:text-blue-300" target="_blank" rel="noopener noreferrer">
+                  (BMC, 2021)
+                </a>
+              </>
+            }
+            content="The above table does not include the large number of studies investigating detection dogs for
+            Covid19, summarized below in a table from the same paper:"
+            image={image1}
+          />
+       
           <NestedToggle
-             title={
-                <>
-                  Detection Dogs Table 2 : Covid{' '}
-                  <a href="https://bmcinfectdis.biomedcentral.com/articles/10.1186/s12879-021-06523-8" className="text-blue-400 hover:text-blue-300" target="_blank" rel="noopener noreferrer">
-                    (BMC, 2021)
-                  </a>
-                </>
-              }
+            title={
+              <>
+                Detection Dogs Table 2 : Covid{' '}
+                <a href="https://bmcinfectdis.biomedcentral.com/articles/10.1186/s12879-021-06523-8" className="text-blue-400 hover:text-blue-300" target="_blank" rel="noopener noreferrer">
+                  (BMC, 2021)
+                </a>
+              </>
+            }
+            content=""
             image={image2}
           />
           <p className="mt-4 mb-4">
