@@ -9,24 +9,22 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Dognosis",
   description: "Reimagining the relationship between humans and our best friends",
-
   openGraph: {
-    title: "dognosis",
+    title: "Dognosis",
     description: "Reimagining the relationship between humans and our best friends",
     url: "https://dognosis.vercel.app/",
-    siteName: "dognosis",
+    siteName: "Dognosis",
     images: [
       {
-        url: "/mainlogo.png",
+        url: "https://dognosis.vercel.app/mainlogo.png",
         width: 1200,
         height: 630,
       },
     ],
-    locale: "en-IN",
+    locale: "en-US",
     type: "website",
   },
 };
-
 
 export default function RootLayout({
   children,
@@ -39,7 +37,7 @@ export default function RootLayout({
         <Navbar />
         {children}
         <Footer />
-        </body>
+      </body>
     </html>
   );
 }
