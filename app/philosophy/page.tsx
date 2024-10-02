@@ -52,8 +52,8 @@ const PhilosophySection = () => {
             </div>
           </Link>
           <blockquote className="italic border-l-4 border-blue-500 pl-4 py-2 my-4 text-gray-300">
-            "Relations are constitutive: dogs and people are emergent as historical beings, as subjects and
-            objects to each other, precisely through the verbs of their relating." Donna Haraway, When
+            &quot;Relations are constitutive: dogs and people are emergent as historical beings, as subjects and
+            objects to each other, precisely through the verbs of their relating.&quot; Donna Haraway, When
             Species Meet
           </blockquote>
         </motion.div>

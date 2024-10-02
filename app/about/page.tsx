@@ -50,7 +50,7 @@ export default function AboutSection() {
               Our mission is to decipher the canine mind in real-time, unlocking new possibilities for communication, health, and understanding between humans and dogs.
             </p>
             <motion.a
-              href="#science"
+              href="/science"
               className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300 ease-in-out"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}

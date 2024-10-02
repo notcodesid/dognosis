@@ -26,13 +26,12 @@ const CareerPage = () => {
             technology, and the manner in which we practice medicine.
           </p>
           <p>
-            We are looking for curious and passionate people to join us on our mission. More about who we're
+            We are looking for curious and passionate people to join us on our mission. More about who we&apos;re
             looking for <a href="https://docs.google.com/document/d/1x7-zxRtbFgDLrKLoSI36htgMxo-gRgOyMwT_7Uu_PUM/edit" className="text-blue-400 hover:text-blue-300">here</a>. In short, we are looking for people to solve novel and challenging problems across
             domains of neurotechnology, electronic/mechanical design, olfactory science, embedded systems,
             signal processing, computational modelling, cognitive neuroscience and machine learning.
           </p>
         </motion.div>
-     
       </div>
     </section>
   )

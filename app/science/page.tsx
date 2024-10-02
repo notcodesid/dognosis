@@ -1,17 +1,17 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, ReactNode } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { ChevronDown } from 'lucide-react'
-import Image from 'next/image'
+import Image, { StaticImageData } from 'next/image'
 import image1 from "@/assets/disease_detection_table.webp"
 import image2 from "@/assets/covid_detection.webp"
 import TheTechSection from '@/components/tech'
 
 interface NestedToggleProps {
-  title: React.ReactNode;
-  content: React.ReactNode;
-  image: any;
+  title: ReactNode;
+  content: ReactNode;
+  image: StaticImageData;
 }
 
 const NestedToggle = ({ title, content, image }: NestedToggleProps) => {
