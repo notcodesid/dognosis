@@ -74,64 +74,64 @@ export default function HeroSection() {
           </div>
         </motion.div>
 
-        {/* The Idea Section */}
-        <div className="mt-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.div
-              className="flex flex-col lg:flex-row items-center gap-12"
+     {/* The Idea Section */}
+     <div className="bg-gray-900 py-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <motion.h2
+          className="text-3xl md:text-4xl font-bold text-white mb-8 text-center"
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+        >
+          The Idea
+        </motion.h2>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          >
+            <Image
+              src={image2}
+              alt="Dogs with neurotech headbands"
+              width={400}
+              height={400}
+              className="rounded-lg shadow-md mx-auto"
+            />
+          </motion.div>
+          <motion.div
+            className="space-y-6"
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+          >
+            <p className="text-gray-300 text-lg">
+              Leveraging non-invasive brain-computer interfaces powered by EEG/fNIRS and powerful AI algorithms, we can begin to decipher the canine mind in real time.
+            </p>
+            <p className="text-white font-semibold">This has three major potential cascades:</p>
+            <motion.div 
+              className="space-y-4"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
+              transition={{ duration: 0.6, delay: 0.6 }}
             >
-              <div className="lg:w-1/2">
-                <Image
-                  src={image2}
-                  alt="Dogs with neurotech headbands"
-                  width={600}
-                  height={600}
-                  className="rounded-lg shadow-md"
-                />
+              <div className="bg-gray-800 rounded-lg p-6 shadow-md">
+                <h3 className="text-xl font-semibold text-white mb-2">Symbiosis</h3>
+                <p className="text-gray-300">Increasing the bandwidth of human-canine communication, cooperation and welfare.</p>
               </div>
-              <div className="lg:w-1/2 space-y-6">
-                <motion.h2
-                  className="text-3xl md:text-4xl font-bold text-white text-center lg:text-left"
-                  initial={{ y: 20, opacity: 0 }}
-                  animate={{ y: 0, opacity: 1 }}
-                  transition={{ duration: 0.8, delay: 0.6 }}
-                >
-                  The Idea
-                </motion.h2>
-                <motion.p
-                  className="text-gray-300 text-lg text-center lg:text-left"
-                  initial={{ y: 20, opacity: 0 }}
-                  animate={{ y: 0, opacity: 1 }}
-                  transition={{ duration: 0.8, delay: 0.8 }}
-                >
-                  Leveraging non-invasive brain-computer interfaces powered by EEG/fNIRS and powerful AI algorithms, we can begin to decipher the canine mind in real time.
-                </motion.p>
-                <motion.div
-                  className="space-y-4"
-                  initial={{ y: 20, opacity: 0 }}
-                  animate={{ y: 0, opacity: 1 }}
-                  transition={{ duration: 0.8, delay: 1 }}
-                >
-                  <p className="text-white font-semibold text-center lg:text-left">This has three major potential cascades:</p>
-                  <ul className="list-disc list-inside text-gray-300 space-y-2 text-center lg:text-left">
-                    <li>
-                      <span className="font-semibold">Symbiosis</span> - Increasing the bandwidth of human-canine communication, cooperation and welfare.
-                    </li>
-                    <li>
-                      <span className="font-semibold">Partners not Pets</span> - Increasing affordances available for all dogs to be free-agents capable of providing for each other and our collective health, security and understanding.
-                    </li>
-                    <li>
-                      <span className="font-semibold">Unleashing Disease-Sniffing Dogs</span> - Real-world applications of canine olfaction to allow for cost-effective, accurate, and non-invasive tests.
-                    </li>
-                  </ul>
-                </motion.div>
+              <div className="bg-gray-800 rounded-lg p-6 shadow-md">
+                <h3 className="text-xl font-semibold text-white mb-2">Partners not Pets</h3>
+                <p className="text-gray-300">Increasing affordances available for all dogs to be free-agents capable of providing for each other and our collective health, security and understanding.</p>
+              </div>
+              <div className="bg-gray-800 rounded-lg p-6 shadow-md">
+                <h3 className="text-xl font-semibold text-white mb-2">Unleashing Disease-Sniffing Dogs</h3>
+                <p className="text-gray-300">Real-world applications of canine olfaction to allow for cost-effective, accurate, and non-invasive tests.</p>
               </div>
             </motion.div>
-          </div>
+          </motion.div>
         </div>
+      </div>
+    </div>
       </div>
     </section>
   )
