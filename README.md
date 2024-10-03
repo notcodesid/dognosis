@@ -2,7 +2,7 @@
 
 Reimagining the relationship between humans and our best friends.
 
-[Course Banner](./public/image.png)
+![Course Banner](./public/image.png)
 
 ## Live Demo
 
